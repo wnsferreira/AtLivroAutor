@@ -18,8 +18,9 @@ builder.Services
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Add services dependencies
-builder.Services.AddScoped<ILivroService, LivroService>();
+// Dependencies
+builder.Services.AddScoped<ILivroService, LivroService>(); 
+builder.Services.AddScoped<IAutorService, AutorService>();
 
 var app = builder.Build();
 

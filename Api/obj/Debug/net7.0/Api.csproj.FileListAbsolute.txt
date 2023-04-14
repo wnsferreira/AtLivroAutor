@@ -160,3 +160,4 @@ D:\Workspace\AtLivroAutor\Api\obj\Debug\net7.0\refint\Api.dll
 D:\Workspace\AtLivroAutor\Api\obj\Debug\net7.0\Api.pdb
 D:\Workspace\AtLivroAutor\Api\obj\Debug\net7.0\Api.genruntimeconfig.cache
 D:\Workspace\AtLivroAutor\Api\obj\Debug\net7.0\ref\Api.dll
+D:\Workspace\AtLivroAutor\Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

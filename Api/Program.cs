@@ -11,7 +11,6 @@ var connectionString = builder.Configuration.GetConnectionString("CursoDbContext
 builder.Services
     .AddDbContext<AtDbContext>(options => options.UseSqlServer(connectionString));
 
-// Add services to the container.
 
 builder.Services
     .AddControllers()
@@ -20,8 +19,8 @@ builder.Services
         configure.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     });
 
-// Add DI - injecao de dependencia
 builder.Services.AddTransient<ILivroService, LivroService>();
+builder.Services.AddTransient<IAutorService, AutorService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

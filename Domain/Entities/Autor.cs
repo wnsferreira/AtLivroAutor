@@ -15,7 +15,7 @@ namespace Domain.Entities
         [MaxLength(50)]
         public string? Sobrenome { get; set; }
 
-        [RegularExpression("\\S*@\\S.\\S*", ErrorMessage = "Verifique o preenchimento do e-mail, parece inválido.")]
+        [Required(ErrorMessage = "O campo Email deve ser preenchido")]
         public string? Email { get; set; }
 
         public string? Nascimento { get; set; }

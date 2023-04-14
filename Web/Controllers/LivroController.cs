@@ -65,36 +65,6 @@ namespace Web.Controllers
             return View();
         }
 
-        /*[HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titulo,Isbn,Ano")] LivroViewModel livroViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                //ViewBag.Message = "Este formulário foi enviado com sucesso!";
-
-                ViewBag.outputMessage = new FormOutputMessage()
-                {
-                    Valid = true,
-                    Message = "Formulário enviado com sucesso!"
-                };
-
-                _context.Add(livroViewModel);
-                await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
-            }
-            if (!ModelState.IsValid)
-            {
-                ViewBag.outputMessage = new FormOutputMessage()
-                {
-                    Message = "Formulário com problemas!",
-                    Valid = false
-                };
-            }
-
-
-            return View(livroViewModel);
-        }*/
 
         [HttpPost]
         [ValidateAntiForgeryToken]
