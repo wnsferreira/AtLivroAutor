@@ -1,0 +1,59 @@
+﻿@*@model Domain.ViewModels.LivroViewModel*@
+
+@model Domain.Entities.Livro
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@if (ViewBag.outputMessage != null)
+{
+    <message output-message="ViewBag.outputMessage" />
+}
+
+<h1>Create</h1>
+
+<h4>Livro</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" required />
+                <span asp-validation-for="Titulo" class="text-danger" ></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Isbn" class="control-label"></label>
+                <input asp-for="Isbn" class="form-control" required />
+                <span asp-validation-for="Isbn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ano" class="control-label"></label>
+                <input asp-for="Ano" class="form-control" required />
+                <span asp-validation-for="Ano" class="text-danger"></span>
+            </div>
+
+            @*<div class="mb-3">
+                @Html.LabelFor(m => m.Autor, "Autor:", new { @class = "form-label" })
+                @Html.DropDownList("AutorId", ViewBag.Autores as SelectList, "-- Selecione um autor --", new { @class = "form-control" })
+            </div>*@
+
+           
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
